@@ -13,6 +13,7 @@ import Excss from './Excss';
 import Inlinecss from './inlinecss';
 import Module from './Components/Module';
 import Task3 from './Components/task3';
+import Calculator from './Components/Calculator';
 
 
 
@@ -44,15 +45,13 @@ const [theme , setTheme] = useState("light")
   <hr/>
   <Task1/>
   <Ifelse/>
-  <Task2 togglebtn={togglebtn} setTogglebtn={setTogglebtn} />*/}
-  <Jsx/> 
-<Excss theme={theme} setTheme={setTheme}/>
+//   <Task2 togglebtn={togglebtn} setTogglebtn={setTogglebtn} />*/}
+{/* //   <Jsx/> 
+// <Excss theme={theme} setTheme={setTheme}/>
 
-{/* <Excss theme={true}> */}
-<Inlinecss/>
-<Module/>
-<Task3/>
+// {/* <Excss theme={true}>  <Inlinecss/> <Module/><Task3/> */}
 
+<Calculator/>
     </div>
   );
 }
