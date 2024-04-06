@@ -10,9 +10,6 @@ function Task4() {
     e.preventDefault();
       // setEmployees([...employees, { id, name, job }]);
       setEmployees([...employees, { id:id, name:name, job:job }]);
-      setName("");
-      setId("");
-      setJob("");
   }
   function sortEmployeesById() {
     const sortedEmployees = [...employees].sort((a, b) => a.id - b.id);

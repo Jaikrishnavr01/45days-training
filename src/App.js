@@ -15,6 +15,7 @@ import Module from './Components/Module';
 import Task3 from './Components/task3';
 import Calculator from './Components/Calculator';
 import Task4 from './Components/Task4';
+import Task5 from './Components/task5';
 
 
 
@@ -53,7 +54,7 @@ const [theme , setTheme] = useState("light")
 // {/* <Excss theme={true}>  <Inlinecss/> <Module/><Task3/> */}
 
 {/* <Calculator/> */}
-<Task4/>
+<Task5/>
     </div>
   );
 }
