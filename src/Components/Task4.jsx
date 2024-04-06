@@ -4,7 +4,7 @@ function Task4() {
   const [employees, setEmployees] = useState([]);
   const [name, setName] = useState("");
   const [id, setId] = useState("");
-  const [job, setJob] = useState("Select Option");
+  const [job, setJob] = useState();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -25,19 +25,19 @@ function Task4() {
         <h1>Add employee</h1>
         <div>
           <label>Employee ID:</label>
-          <input type="number" value={id} onChange={(e) => setId(e.target.value)}/>
+          <input type="number" value={id} onChange={(e) => setId(e.target.value)} required/>
           <br />
           <label>Name:</label>
           <input
             type="text"
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)} required
           />
           <br />
           <label>Job:</label>
           <select
             value={job}
-            onChange={(e) => setJob(e.target.value)}
+            onChange={(e) => setJob(e.target.value)} required
           >
             <option value="">Select Option</option>
             <option value="full-time">Full time</option>
@@ -56,8 +56,8 @@ function Task4() {
           </tr>
         </thead>
         <tbody>
-          {employees.map((employee, index) => (
-            <tr key={index}>
+          {employees.map((employee) => (
+            <tr key={employee.id}>
               <td>{employee.id}</td>
               <td>{employee.name}</td>
               <td>{employee.job}</td>
