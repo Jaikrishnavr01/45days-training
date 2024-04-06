@@ -10,6 +10,7 @@ const Task5 = () => {
   function handleSubmit(e) {
     e.preventDefault();
     setEmployees([...employees, { id: id, name: name, job: job }]);
+    alert("Data added successfully")
   }
 
   function sortEmployeesById() {
@@ -21,9 +22,15 @@ const Task5 = () => {
     <div>
       <div>
         {showForm ? (
+          <>
           <button onClick={() => setShowForm(false)}>Show Employees</button>
-        ) : (
           <button onClick={() => setShowForm(true)}>Add Employee</button>
+          </>
+        ) : (
+          <>
+          <button onClick={() => setShowForm(false)}>Show Employees</button>
+          <button onClick={() => setShowForm(true)}>Add Employee</button>  
+          </>
         )}
       </div>
       {showForm ? (
