@@ -23,6 +23,7 @@ import SetTimer from './Components/Useeffect/SetTimer';
 import SetTimer01 from './Components/Useeffect/SetTimer';
 import SetInterval1 from './Components/Useeffect/SetInterval1';
 import Greeting from './Components/Useeffect/Greeting';
+import Task6 from './Components/Useeffect/task6';
 
 
 
@@ -67,7 +68,8 @@ const [theme , setTheme] = useState("light")
 {/* <Toggle/> */}
 {/* <SetTimer01/> */}
 {/* <SetInterval1/> */}
-<Greeting/>
+{/* <Greeting/> */}
+<Task6/>
     </div>
   );
 }
