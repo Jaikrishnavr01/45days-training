@@ -1,0 +1,30 @@
+*{
+    background-color: black;
+    color: aliceblue;
+}
+
+.btn-class{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: space-evenly; */
+    gap:20px;
+}
+.btn{
+   background-color: blue;
+    border-radius: 20px;
+    padding: 20px;
+    border: none;
+   
+}
+.btn2{
+    background-color: rgb(255, 0, 0);
+     border-radius: 20px;
+     padding: 20px;
+     border: none;
+    
+ }
+span{
+ 
+    color: rgb(255, 183, 0);
+}

@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import "../CSS/Style.css"
 
 const Task6 = () => {
     const [count, setCount] = useState(0);
-    const [intervalId, setIntervalId] = useState(null);
+    const [intervalId, setIntervalId] = useState();
+    const [btnText, setBtnText] = useState("Start");
 
     useEffect(() => {
         const interval = setInterval(() => {
             setCount(prev => prev + 1);
         }, 1000);
 
+        setBtnText("Stop");
         setIntervalId(interval);
 
         return () => {
@@ -16,36 +19,39 @@ const Task6 = () => {
         };
     }, []);
 
+
     const startTimer = () => {
         if (!intervalId) {
             const interval = setInterval(() => {
                 setCount(prev => prev + 1);
             }, 1000);
             setIntervalId(interval);
+            setBtnText("Stop");
         }
     };
 
     const stopTimer = () => {
         if (intervalId) {
             clearInterval(intervalId);
-            setIntervalId("");
+            setBtnText("Start");
         }
-
     };
 
-    const ResetTimer = () => {
-        setCount(0);
+    const resetTimer = () => {
         clearInterval(intervalId);
-        setIntervalId("");
-    }
+        setIntervalId("")
+        setCount(0);
+        setBtnText("Start");
+    };
 
     return (
         <div>
-            <h1>Timer - {count}</h1>
+            <h1>Timer - <span>{count}</span></h1>
             <br />
-            <button onClick={startTimer}>Start Timer</button>
-            <button onClick={stopTimer}>Stop Timer</button>
-            <button onClick={ResetTimer}>Reset Timer</button>
+            <div className='btn-class'>
+            <button onClick={intervalId ? stopTimer : startTimer} className='btn'>{btnText}</button>
+            <button onClick={resetTimer} className='btn2'>Reset Timer</button>
+            </div>
         </div>
     );
 };
