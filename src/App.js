@@ -16,6 +16,13 @@ import Task3 from './Components/task3';
 import Calculator from './Components/Calculator';
 import Task4 from './Components/Task4';
 import Task5 from './Components/task5';
+import CounterMounter from './Components/Useeffect/CounterMounter';
+import CounterMountAndUnMount from './Components/Useeffect/CounterMountAndUnMount';
+import Toggle from './Components/Useeffect/Toggle';
+import SetTimer from './Components/Useeffect/SetTimer';
+import SetTimer01 from './Components/Useeffect/SetTimer';
+import SetInterval1 from './Components/Useeffect/SetInterval1';
+import Greeting from './Components/Useeffect/Greeting';
 
 
 
@@ -54,7 +61,13 @@ const [theme , setTheme] = useState("light")
 // {/* <Excss theme={true}>  <Inlinecss/> <Module/><Task3/> */}
 
 {/* <Calculator/> */}
-<Task5/>
+{/* <Task5/> */}
+{/* <CounterMounter/> */}
+{/* <CounterMountAndUnMount/> */}
+{/* <Toggle/> */}
+{/* <SetTimer01/> */}
+{/* <SetInterval1/> */}
+<Greeting/>
     </div>
   );
 }
