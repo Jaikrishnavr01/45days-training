@@ -10,9 +10,8 @@ const Task6 = () => {
         const interval = setInterval(() => {
             setCount(prev => prev + 1);
         }, 1000);
-
-        setBtnText("Stop");
         setIntervalId(interval);
+        setBtnText("Stop");
 
         return () => {
             clearInterval(interval);
@@ -33,6 +32,7 @@ const Task6 = () => {
     const stopTimer = () => {
         if (intervalId) {
             clearInterval(intervalId);
+            setIntervalId("")
             setBtnText("Start");
         }
     };
