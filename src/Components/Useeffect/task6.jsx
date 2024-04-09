@@ -3,45 +3,23 @@ import "../CSS/Style.css"
 
 const Task6 = () => {
     const [count, setCount] = useState(0);
-    const [intervalId, setIntervalId] = useState();
-    const [btnText, setBtnText] = useState("Start");
-
+    const [isRunning, setIsRunning] = useState(false);
+    
     useEffect(() => {
-        const interval = setInterval(() => {
-            setCount(prev => prev + 1);
-        }, 1000);
-        setIntervalId(interval);
-        setBtnText("Stop");
-
+        let interval;
+        if (isRunning) {
+            interval = setInterval(() => {
+                setCount(prev => prev + 1);
+            }, 1000);
+        }
         return () => {
             clearInterval(interval);
         };
-    }, []);
-
-
-    const startTimer = () => {
-        if (!intervalId) {
-            const interval = setInterval(() => {
-                setCount(prev => prev + 1);
-            }, 1000);
-            setIntervalId(interval);
-            setBtnText("Stop");
-        }
-    };
-
-    const stopTimer = () => {
-        if (intervalId) {
-            clearInterval(intervalId);
-            setIntervalId("")
-            setBtnText("Start");
-        }
-    };
+    }, [isRunning]);
 
     const resetTimer = () => {
-        clearInterval(intervalId);
-        setIntervalId("")
         setCount(0);
-        setBtnText("Start");
+        setIsRunning(false);
     };
 
     return (
@@ -49,8 +27,12 @@ const Task6 = () => {
             <h1>Timer - <span>{count}</span></h1>
             <br />
             <div className='btn-class'>
-            <button onClick={intervalId ? stopTimer : startTimer} className='btn'>{btnText}</button>
-            <button onClick={resetTimer} className='btn2'>Reset Timer</button>
+                {isRunning ? (
+                    <button onClick={() => setIsRunning(false)} className='btn'>Stop</button>
+                ) : (
+                    <button onClick={() => setIsRunning(true)} className='btn'>Start</button>
+                )}
+                <button onClick={resetTimer} className='btn2'>Reset Timer</button>
             </div>
         </div>
     );

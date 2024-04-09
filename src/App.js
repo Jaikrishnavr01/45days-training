@@ -24,6 +24,7 @@ import SetTimer01 from './Components/Useeffect/SetTimer';
 import SetInterval1 from './Components/Useeffect/SetInterval1';
 import Greeting from './Components/Useeffect/Greeting';
 import Task6 from './Components/Useeffect/task6';
+import Task7 from './Components/task7';
 
 
 
@@ -69,7 +70,10 @@ const [theme , setTheme] = useState("light")
 {/* <SetTimer01/> */}
 {/* <SetInterval1/> */}
 {/* <Greeting/> */}
-<Task6/>
+{/* <Task6/> */}
+
+<Task7/>
+
     </div>
   );
 }
