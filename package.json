@@ -15,6 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "server": "npx json-server ./src/Components/DummyServer/Json/db.json --watch --port 3002",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

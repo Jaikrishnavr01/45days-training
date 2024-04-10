@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Avengers",
-      "ratings": "4.5",
+      "ratings": "4",
       "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXGi1pG_hplSSxc0r-u-W7mcLYrh2HzjVUEb3mK_Y2sg&s"
     },
     {
@@ -13,11 +13,16 @@
       "poster": "https://rukminim2.flixcart.com/image/850/1000/l3bx5e80/poster/p/x/m/small-kgf-poster-kgf-yash-movie-poster-for-room-kgf-chapter-2-original-imageh8qchumcz8k.jpeg?q=20&crop=false"
     },
     {
-      "id": "",
+      "id": "3",
       "name": "MAGE",
-      "ratings": "3",
+      "ratings": "5",
       "poster": "https://marketplace.canva.com/EAFvpcP6DrQ/1/0/1131w/canva-green-black-classic-minimalist-fantasy-movie-poster-njyzykFuCug.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Alone",
+      "ratings": "6",
+      "poster": "https://marketplace.canva.com/EAFTl0ixW_k/1/0/1131w/canva-black-white-minimal-alone-movie-poster-YZ-0GJ13Nc8.jpg"
     }
-
   ]
 }
