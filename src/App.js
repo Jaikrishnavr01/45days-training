@@ -25,6 +25,8 @@ import SetInterval1 from './Components/Useeffect/SetInterval1';
 import Greeting from './Components/Useeffect/Greeting';
 import Task6 from './Components/Useeffect/task6';
 import Task7 from './Components/task7';
+import Fetchingfromserver from './Components/ApiAxios/Fetchingfromserver';
+import CRDmethod from './Components/ApiAxios/CRDmethod';
 
 
 
@@ -72,7 +74,12 @@ const [theme , setTheme] = useState("light")
 {/* <Greeting/> */}
 {/* <Task6/> */}
 
-<Task7/>
+{/* <Task7/> */}
+
+
+{/* <Fetchingfromserver/> */}
+
+<CRDmethod/>
 
     </div>
   );

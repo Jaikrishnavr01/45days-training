@@ -1,0 +1,23 @@
+{
+  "Movie_list": [
+    {
+      "id": "1",
+      "name": "Avengers",
+      "ratings": "4.5",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXGi1pG_hplSSxc0r-u-W7mcLYrh2HzjVUEb3mK_Y2sg&s"
+    },
+    {
+      "id": "2",
+      "name": "kGF",
+      "ratings": "2",
+      "poster": "https://rukminim2.flixcart.com/image/850/1000/l3bx5e80/poster/p/x/m/small-kgf-poster-kgf-yash-movie-poster-for-room-kgf-chapter-2-original-imageh8qchumcz8k.jpeg?q=20&crop=false"
+    },
+    {
+      "id": "",
+      "name": "MAGE",
+      "ratings": "3",
+      "poster": "https://marketplace.canva.com/EAFvpcP6DrQ/1/0/1131w/canva-green-black-classic-minimalist-fantasy-movie-poster-njyzykFuCug.jpg"
+    }
+
+  ]
+}
