@@ -7,7 +7,7 @@ import Event from './Components/PropsMethod/Event';
 import Task1 from './Components/Task1';
 import Ifelse from './Components/ConditionalRendering/ifelse';
 import Task2 from './Components/Task2';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Jsx from './Components/Jsx';
 import Excss from './Excss';
 import Inlinecss from './inlinecss';
@@ -27,16 +27,23 @@ import Task6 from './Components/Useeffect/task6';
 import Task7 from './Components/task7';
 import Fetchingfromserver from './Components/ApiAxios/Fetchingfromserver';
 import CRDmethod from './Components/ApiAxios/CRDmethod';
+import Navbar from './Components/Pages/Navbar';
+import Reducer from './Components/Reduder/Reducer';
+import A from './Components/UseContext/PropsDrilling/A';
 
 
 
+export const userContext = React.createContext()
+export const PasswordContext = React.createContext()
 
 
 function App() {
 // alert("hello world")
 const [togglebtn , setTogglebtn] = useState("ON")
 const [theme , setTheme] = useState("light")
-  return (
+
+
+return (
     <div className="App">
   {/* <h1>Welcome</h1> */}
 {/* 
@@ -81,7 +88,17 @@ const [theme , setTheme] = useState("light")
 
 {/* <Fetchingfromserver/> */}
 
-<CRDmethod/>
+{/* <CRDmethod/> */}
+
+<userContext.Provider value={{"name" : "Adam", "age":10}}>
+
+  <PasswordContext.Provider value={'abc@123'}>
+    <A/>
+    </PasswordContext.Provider>
+</userContext.Provider>
+
+
+{/* <Reducer/> */}
 
     </div>
   );

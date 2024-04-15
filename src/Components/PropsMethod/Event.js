@@ -10,7 +10,6 @@ const Event = () => {
   
     <div>
       <PropsMethod fn={abc}/>
-      
     </div>
   )
 }
