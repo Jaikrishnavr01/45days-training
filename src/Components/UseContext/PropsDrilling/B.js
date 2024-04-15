@@ -1,10 +1,11 @@
 import React from 'react'
-import UseContext from '../UseContext'
+import UseContext01 from '../UseContext'
+// import UseContext from '../UseContext'
 
 export default function B() {
   return (
     <div>
-      <UseContext/>
+      <UseContext01/>
     </div>
   )
 }

@@ -98,7 +98,7 @@ return (
 </userContext.Provider>
 
 
-{/* <Reducer/> */}
+<Reducer/>
 
     </div>
   );
