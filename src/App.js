@@ -7,7 +7,7 @@ import Event from './Components/PropsMethod/Event';
 import Task1 from './Components/Task1';
 import Ifelse from './Components/ConditionalRendering/ifelse';
 import Task2 from './Components/Task2';
-import React, { useState } from 'react';
+import React, { useReducer, useState } from 'react';
 import Jsx from './Components/Jsx';
 import Excss from './Excss';
 import Inlinecss from './inlinecss';
@@ -30,6 +30,13 @@ import CRDmethod from './Components/ApiAxios/CRDmethod';
 import Navbar from './Components/Pages/Navbar';
 import Reducer from './Components/Reduder/Reducer';
 import A from './Components/UseContext/PropsDrilling/A';
+import A1 from './Components/GlobalStateMangement/A';
+import B1 from './Components/GlobalStateMangement/B';
+import D1 from './Components/GlobalStateMangement/D';
+import F1 from './Components/GlobalStateMangement/F';
+import C1 from './Components/GlobalStateMangement/C';
+import ReducerObj from './Components/ReducerUsingObject/ReducerObj';
+import LoaderAnimation from './Components/LoaderAnimation/LoaderAnimation';
 
 
 
@@ -37,7 +44,26 @@ export const userContext = React.createContext()
 export const PasswordContext = React.createContext()
 
 
+//global state management
+
+export const CounterContext =  React.createContext();
+
+
 function App() {
+
+  const initialState = 0;
+  const reducer = (state, action) => {
+    switch(action){
+      case 'inc': return state+1
+      case 'dec': return state-1
+      case 'reset': return initialState
+      case 'return': return state
+
+    }
+  }
+
+  const[count, dispatch] = useReducer(reducer, initialState)
+
 // alert("hello world")
 const [togglebtn , setTogglebtn] = useState("ON")
 const [theme , setTheme] = useState("light")
@@ -90,15 +116,23 @@ return (
 
 {/* <CRDmethod/> */}
 
-<userContext.Provider value={{"name" : "Adam", "age":10}}>
+{/* <userContext.Provider value={{"name" : "Adam", "age":10}}>
 
   <PasswordContext.Provider value={'abc@123'}>
     <A/>
     </PasswordContext.Provider>
 </userContext.Provider>
+<Reducer/> */}
 
+{/* {count} */}
+{/* <CounterContext.Provider value={{count:count,dispatch:dispatch}}>
+  <A1/>
+  <B1/>
+  <C1/>
+</CounterContext.Provider> */}
 
-<Reducer/>
+{/* <ReducerObj/> */}
+<LoaderAnimation/>
 
     </div>
   );
