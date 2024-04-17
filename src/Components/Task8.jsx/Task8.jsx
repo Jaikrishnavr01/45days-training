@@ -1,55 +1,57 @@
-import React, { useRef, useState } from 'react';
+import React, { useReducer, useRef } from 'react';
 
-function Task8() {
-  const [cartItems, setCartItems] = useState([]);
-  const product1Ref = useRef(null);
-  const product2Ref = useRef(null);
+export default function Task8() {
+  const product1Ref = useRef(0);
+  const product2Ref = useRef(0);
 
-  const handleAddToCart = (product) => {
-    const existingIndex = cartItems.findIndex(item => item.name === product.name);
-    const updatedCart = [...cartItems];
-    if (existingIndex !== -1) {
-      updatedCart[existingIndex].quantity++;
-    } else {
-      updatedCart.push({ name: product.name, quantity: 1 });
-    }
-    setCartItems(updatedCart);
-  };
-
-  const handleRemoveFromCart = (index) => {
-    const updatedCart = [...cartItems];
-    updatedCart.splice(index, 1);
-    setCartItems(updatedCart);
-  };
-
-  const handleDecrementQuantity = (index) => {
-    const updatedCart = [...cartItems];
-    if (updatedCart[index].quantity > 1) {
-      updatedCart[index].quantity--;
-      setCartItems(updatedCart);
+  const Reducer = (state, action) => {
+    switch (action.type) {
+      case 'product1':
+        return { ...state, product1: state.product1 + 1, showProduct1: true };
+      case 'product1dec':
+        return { ...state, product1: state.product1 > 1 ? state.product1 - 1 : 0 };
+      case 'product2':
+        return { ...state, product2: state.product2 + 1, showProduct2: true };
+      case 'product2dec':
+        return { ...state, product2: state.product2 > 1 ? state.product2 - 1 : 0 };
+      case 'produ1remove':
+        return { ...state, product1: 0, showProduct1: false };
+      case 'produ2remove':
+        return { ...state, product2: 0, showProduct2: false };
+      default:
+        return state;
     }
   };
+
+  const [count, dispatch] = useReducer(Reducer, {
+    product1: product1Ref.current,
+    product2: product2Ref.current,
+  });
 
   return (
     <div>
-      <h2>Cart Page</h2>
-      <ul>
-        {cartItems.map((item, index) => (
-          <li key={index}>
-            {item.name} - Quantity: {item.quantity}
-            <button onClick={() => handleRemoveFromCart(index)}>Remove</button>
-            <button onClick={() => handleDecrementQuantity(index)}>Decrement</button>
-          </li>
-        ))}
-      </ul>
-      <button onClick={() => handleAddToCart({ name: 'product1' })} ref={product1Ref}>
-        Add product1
-      </button>
-      <button onClick={() => handleAddToCart({ name: 'product2' })} ref={product2Ref}>
-        Add product2
-      </button>
+      {count.showProduct1 && (
+        <p>
+          product1: {count.product1}{' '}
+          <span>
+            <button onClick={() => dispatch({ type: 'product1dec' })}>Decrement</button>
+            <button onClick={() => dispatch({ type: 'produ1remove' })}>Remove</button>
+          </span>
+        </p>
+      )}
+      {count.showProduct2 && (
+        <p>
+          product2: {count.product2}{' '}
+          <span>
+            <button onClick={() => dispatch({ type: 'product2dec' })}>Decrement</button>
+            <button onClick={() => dispatch({ type: 'produ2remove' })}>Remove</button>
+          </span>
+        </p>
+      )}
+
+      <button onClick={() => dispatch({ type: 'product1' })}>add product1</button>
+      
+      <button onClick={() => dispatch({ type: 'product2' })}>add product2</button>
     </div>
   );
 }
-
-export default Task8;
