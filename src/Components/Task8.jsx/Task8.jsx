@@ -32,7 +32,7 @@ export default function Task8() {
     <div>
       {count.showProduct1 && (
         <p>
-          product1: {count.product1}{' '}
+          product1: {count.product1}
           <span>
             <button onClick={() => dispatch({ type: 'product1dec' })}>Decrement</button>
             <button onClick={() => dispatch({ type: 'produ1remove' })}>Remove</button>
@@ -41,7 +41,7 @@ export default function Task8() {
       )}
       {count.showProduct2 && (
         <p>
-          product2: {count.product2}{' '}
+          product2: {count.product2}
           <span>
             <button onClick={() => dispatch({ type: 'product2dec' })}>Decrement</button>
             <button onClick={() => dispatch({ type: 'produ2remove' })}>Remove</button>
