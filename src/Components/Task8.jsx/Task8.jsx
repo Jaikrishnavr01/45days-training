@@ -9,11 +9,11 @@ export default function Task8() {
       case 'product1':
         return { ...state, product1: state.product1 + 1, showProduct1: true };
       case 'product1dec':
-        return { ...state, product1: state.product1 > 1 ? state.product1 - 1 : 0 };
+        return { ...state, product1: state.product1 > 1 ? state.product1 - 1 : 1 };
       case 'product2':
         return { ...state, product2: state.product2 + 1, showProduct2: true };
       case 'product2dec':
-        return { ...state, product2: state.product2 > 1 ? state.product2 - 1 : 0 };
+        return { ...state, product2: state.product2 > 1 ? state.product2 - 1 : 1 };
       case 'produ1remove':
         return { ...state, product1: 0, showProduct1: false };
       case 'produ2remove':
