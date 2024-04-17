@@ -37,6 +37,12 @@ import F1 from './Components/GlobalStateMangement/F';
 import C1 from './Components/GlobalStateMangement/C';
 import ReducerObj from './Components/ReducerUsingObject/ReducerObj';
 import LoaderAnimation from './Components/LoaderAnimation/LoaderAnimation';
+import Usecallback1 from './Components/Usecallbackcomp/Usecallback1';
+import Parent1 from './Components/UseMemodemo/Parent1';
+import Parentdemo from './Components/Useref/Parentdemo';
+import Parentdemo1 from './Components/Useref/Parentdemo1';
+import Task8 from './Components/Task8.jsx/Task8';
+
 
 
 
@@ -132,8 +138,13 @@ return (
 </CounterContext.Provider> */}
 
 {/* <ReducerObj/> */}
-<LoaderAnimation/>
+{/* <LoaderAnimation/> */}
 
+{/* <Usecallback1/> */}
+{/* <Parent1/>
+<Parentdemo/> */}
+{/* <Parentdemo1/> */}
+<Task8/>
     </div>
   );
 }
