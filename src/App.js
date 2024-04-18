@@ -42,6 +42,10 @@ import Parent1 from './Components/UseMemodemo/Parent1';
 import Parentdemo from './Components/Useref/Parentdemo';
 import Parentdemo1 from './Components/Useref/Parentdemo1';
 import Task8 from './Components/Task8.jsx/Task8';
+import Hooksdoctitle1 from './Components/Hooksdoctitle1';
+import Hooksdoctitle2 from './Components/Hooksdoctitle2';
+import Counter1Hoooks from './Components/Counter1Hoooks';
+import Counter2Hoooks from './Components/Counter2Hoooks';
 
 
 
@@ -144,7 +148,17 @@ return (
 {/* <Parent1/>
 <Parentdemo/> */}
 {/* <Parentdemo1/> */}
-<Task8/>
+{/* <Task8/> */}
+
+
+
+{/* <Hooksdoctitle1/>
+<Hooksdoctitle2/> */}
+
+
+<Counter1Hoooks/>
+<Counter2Hoooks/>
+
     </div>
   );
 }
