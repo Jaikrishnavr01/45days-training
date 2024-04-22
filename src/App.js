@@ -48,6 +48,9 @@ import Counter1Hoooks from './Components/Counter1Hoooks';
 import Counter2Hoooks from './Components/Counter2Hoooks';
 import ErrorHandling from './Components/Errorhandling/ErrorHandling';
 import Product from './Components/Errorhandling/Product';
+import Portal from './Components/ReactPortal/Portal';
+import Counter01 from './Components/Hoc/Comp/Counter01';
+import Counter02 from './Components/Hoc/Comp/Counter02';
 
 
 
@@ -163,7 +166,7 @@ return (
 <Counter2Hoooks/> */}
 
 
-<ErrorHandling>
+{/* <ErrorHandling>
   <Product name= 'Iphone'/>
 </ErrorHandling>
 
@@ -175,10 +178,13 @@ return (
 </ErrorHandling>
 
 
+    <Portal/> */}
+    <Counter01/>
+    <Counter02/>
     </div>
-    <div className="Portal">
+    {/* <div className="Portal">
       
-    </div>
+    </div> */}
     </>
   
   );
