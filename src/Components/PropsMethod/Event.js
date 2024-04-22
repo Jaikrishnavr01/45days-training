@@ -4,7 +4,7 @@ import PropsMethod from './PropsMethod'
 const Event = () => {
     function abc(a){
         console.log(a)
-        debugger
+ 
     }
   return (
   

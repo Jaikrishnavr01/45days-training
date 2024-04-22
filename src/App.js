@@ -46,6 +46,8 @@ import Hooksdoctitle1 from './Components/Hooksdoctitle1';
 import Hooksdoctitle2 from './Components/Hooksdoctitle2';
 import Counter1Hoooks from './Components/Counter1Hoooks';
 import Counter2Hoooks from './Components/Counter2Hoooks';
+import ErrorHandling from './Components/Errorhandling/ErrorHandling';
+import Product from './Components/Errorhandling/Product';
 
 
 
@@ -80,30 +82,31 @@ const [theme , setTheme] = useState("light")
 
 
 return (
+  <>
     <div className="App">
   {/* <h1>Welcome</h1> */}
-{/* 
-  
+
+{/*   
   <Hello name={"sai"} age={18}/>
   <Hello name={"siva"} age={29}>
     <p>i am a bad guy</p>
   </Hello>
 
-  <Cello name={"jai"} age={18}/>
+ <Cello name={"jai"} age={18}/> */}
 
-  <Cello name={"kumar"} age={81}>
+  {/* <Cello name={"kumar"} age={81}>
     <p>this is kumar</p>
   </Cello>
   <br/>
-  <hr/>
-  <Event/>
-<br/>
+  <hr/> */}
+ {/* <Event/> */}
+ {/* <br/>
   <Counter/>
 
   <hr/>
   <Task1/>
   <Ifelse/>
-//   <Task2 togglebtn={togglebtn} setTogglebtn={setTogglebtn} />*/}
+//   <Task2 togglebtn={togglebtn} setTogglebtn={setTogglebtn} /> */}
 {/* //   <Jsx/> 
 // <Excss theme={theme} setTheme={setTheme}/>
 
@@ -156,10 +159,28 @@ return (
 <Hooksdoctitle2/> */}
 
 
-<Counter1Hoooks/>
-<Counter2Hoooks/>
+{/* <Counter1Hoooks/>
+<Counter2Hoooks/> */}
+
+
+<ErrorHandling>
+  <Product name= 'Iphone'/>
+</ErrorHandling>
+
+<ErrorHandling>
+  <Product name= 'nokia'/>
+</ErrorHandling>
+<ErrorHandling>
+  <Product name= 'samsung'/>
+</ErrorHandling>
+
 
     </div>
+    <div className="Portal">
+      
+    </div>
+    </>
+  
   );
 }
 
