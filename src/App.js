@@ -146,15 +146,15 @@ return (
   <B1/>
   <C1/>
 </CounterContext.Provider> */}
-
-{/* <ReducerObj/> */}
+<Reducer/>
+<ReducerObj/>
 {/* <LoaderAnimation/> */}
 
 {/* <Usecallback1/> */}
 {/* <Parent1/>
 <Parentdemo/> */}
 {/* <Parentdemo1/> */}
-{/* <Task8/> */}
+<Task8/>
 
 
 
@@ -179,8 +179,8 @@ return (
 
 
     <Portal/> */}
-    <Counter01/>
-    <Counter02/>
+    {/* <Counter01/>
+    <Counter02/> */}
     </div>
     {/* <div className="Portal">
       

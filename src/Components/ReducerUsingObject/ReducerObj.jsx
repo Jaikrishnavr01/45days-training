@@ -19,7 +19,7 @@ secondCounter:0,
     const[count, dispatch] = useReducer(reducer, initialState)
   return (
     <div>
-      {count.firstCounter}
+      <p> count: {count.firstCounter} </p>
     <button onClick={()=>dispatch('inc')}>Inc</button>
     <button onClick={()=>dispatch('dec')}>dec</button>
 

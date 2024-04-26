@@ -5,7 +5,7 @@ export default function Task8() {
   const product2Ref = useRef(0);
 
   const Reducer = (state, action) => {
-    switch (action.type) {
+    switch (action) {
       case 'product1':
         return { ...state, product1: state.product1 + 1, showProduct1: true };
       case 'product1dec':
@@ -34,8 +34,8 @@ export default function Task8() {
         <p>
           product1: {count.product1}
           <span>
-            <button onClick={() => dispatch({ type: 'product1dec' })}>Decrement</button>
-            <button onClick={() => dispatch({ type: 'produ1remove' })}>Remove</button>
+            <button onClick={() => dispatch( 'product1dec' )}>Decrement</button>
+            <button onClick={() => dispatch('produ1remove' )}>Remove</button>
           </span>
         </p>
       )}
@@ -43,15 +43,15 @@ export default function Task8() {
         <p>
           product2: {count.product2}
           <span>
-            <button onClick={() => dispatch({ type: 'product2dec' })}>Decrement</button>
-            <button onClick={() => dispatch({ type: 'produ2remove' })}>Remove</button>
+            <button onClick={() => dispatch('product2dec')}>Decrement</button>
+            <button onClick={() => dispatch('produ2remove')}>Remove</button>
           </span>
         </p>
       )}
 
-      <button onClick={() => dispatch({ type: 'product1' })}>add product1</button>
+      <button onClick={() => dispatch('product1' )}>add product1</button>
       
-      <button onClick={() => dispatch({ type: 'product2' })}>add product2</button>
+      <button onClick={() => dispatch( 'product2' )}>add product2</button>
     </div>
   );
 }
